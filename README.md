@@ -1,5 +1,6 @@
 # backup-notification-telegram
 The "Telegram Backup Notification" repository contains an Ansible playbook designed to automate and streamline the monitoring of backup operations across multiple servers. The script's primary function is to check the status of backups and notify the user via Telegram about the results.
+
 Key Features:
 
 -Backup Monitoring Automation: Utilizes Ansible to periodically check the status of backups on specified servers.
