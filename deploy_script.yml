@@ -5,7 +5,7 @@
 
     - name: Copy script to VPS
       copy:
-        src: /root/script.sh
+        src: /root/notify_backup_tele/script.sh
         dest: /orkitools/tele_backup.sh
         mode: '0755'
 
