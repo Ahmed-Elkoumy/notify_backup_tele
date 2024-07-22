@@ -11,7 +11,9 @@ Key Features:
 4-Customizable Configuration: Offers flexibility through configurable parameters for server addresses, backup paths, and notification settings.
 
 5-Logging and Reporting: Maintains logs of backup status checks and notifications for accountability and troubleshooting purposes.
-Deployment Steps:
+
+
+**Deployment Steps:**
 
     Install Ansible:
         Ensure Ansible is installed on your local machine:
@@ -23,7 +25,50 @@ sudo apt install ansible
 
 On CentOS, Red Hat, or Rocky Linux:
 
+bash
 
+        sudo yum install ansible
+
+Clone the Repository:
+
+    Clone the "Telegram Backup Notification" repository from GitHub:
+
+    bash
+
+    git clone git@github.com:Ahmed-Elkoumy/notify_backup_tele.git
+    cd notify_backup_tele
+
+Create and Configure the Inventory File:
+
+    Create a new Ansible Vault-encrypted inventory file (hosts.ini) with a strong password:
+
+    bash
+
+ansible-vault create hosts.ini
+
+Add your server configurations to hosts.ini:
+
+    For EC2 instances:
+
+    ini
+
+vps1 ansible_host=<EC2-IP> ansible_user=ec2-user ansible_ssh_private_key_file=<PATH-TO-private-key>
+
+For other servers:
+
+ini
+
+        <Server-Name> ansible_host=<Server-IP> ansible_user=root ansible_port=<SSH-port> ansible_ssh_pass=<Server-Password>
+
+Deploy the Ansible Playbook:
+
+    Execute the deployment script (deploy_script.yml) with Ansible:
+
+    bash
+
+ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i hosts.ini deploy_script.yml --ask-vault-pass
+
+Provide the Ansible Vault password when prompted.
 
         sudo yum install ansible
 
