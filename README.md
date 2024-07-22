@@ -14,14 +14,14 @@ Key Features:
 -Logging and Reporting: Maintains logs of backup status checks and notifications for accountability and troubleshooting purposes.
 
 
-## How to Send a Message from Your Server to Telegram
+### How to Send a Message from Your Server to Telegram
 
-### Step 1: Create a Telegram Bot
+## Step 1: Create a Telegram Bot
 1. Open Telegram and search for "BotFather".
 2. Start a chat with the BotFather and send the command `/newbot`.
 3. Follow the instructions to create a new bot. You'll get a token that looks like `123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11`.
 
-### Step 2: Get Your Chat ID
+## Step 2: Get Your Chat ID
 1. Start a chat with your new bot by searching for it in Telegram and clicking on the "Start" button.
 2. Open the following URL in your browser, replacing `YOUR_BOT_TOKEN` with the token you got from BotFather:
    ```sh
@@ -30,7 +30,7 @@ Key Features:
  Look for the chat object in the response, which contains your id. This is your chat ID.
 
  
-**Deployment Steps:**
+### Deployment Steps:
 
 1. Install Ansible:
    - Ensure Ansible is installed on your local machine:
