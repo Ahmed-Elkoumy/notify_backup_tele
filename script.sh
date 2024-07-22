@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Variables
-CHAT_ID="1191016379"
-BOT_TOKEN="7348744798:AAF6CZVZTsqjoVjJyWXjTRDc1f9v8kdXtPY"
+CHAT_ID="<Chat ID>"
+BOT_TOKEN="<Bot TOKEN >"
 URL="https://api.telegram.org/bot$BOT_TOKEN/sendMessage"
 HOSTNAME=$(hostname)
 
-# Define today's date in dd-mm-yyyy format
+
 today=$(date +'%d-%m-%Y')
 
 # Search for the word "OK"
